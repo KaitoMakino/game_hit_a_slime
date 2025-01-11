@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>スライムたたきゲーム</title>
+  <!-- CSSファイルの読み込み -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- イントロ画面（黒背景にロゴを中央配置） -->
+  <div id="intro-container">
+    <img id="intro-logo" src="images/logo.png" alt="ロゴ">
+  </div>
+
+  <!-- BGMをループ再生するためのaudioタグを追加 -->
+  <audio id="bgm" src="bgm_title.mp3" preload="auto" loop></audio>
+
+  <!-- タイトル画像を表示する領域 -->
+  <div id="title-container" style="display: none;">
+    <img id="title-image" src="images/title.png" alt="ゲームタイトル">
+  </div>
+
+  <!-- ボタンを表示する領域 -->
+  <div id="button-container" style="display: none;">
+    <button id="start-button">GAME START</button>
+    <button id="ranking-button">RANKING</button>
+  </div>
+
+  <!-- ゲーム画面を表示する領域 -->
+  <div id="game-container" style="display: none;">
+    <img id="slime" src="images/slime.png" alt="スライム" style="display: none;">
+
+    <div id="score-display">Score: 0</div>
+    <div id="time-display">Time: 10</div>
+    <button id="end-game-button">END GAME</button>
+    <div id="final-score" style="display: none;">Your Score: 0</div>
+    <div id="pre-game-display" style="display: none;">3</div>
+  </div>
+
+  <!-- ランキング画面 -->
+  <div id="ranking-container" style="display: none;">
+    <h2>Ranking</h2>
+    <ol id="ranking-list"></ol>
+    <button id="back-title-button">Back to Title</button>
+  </div>
+
+  <!-- JSファイルの読み込み -->
+  <script src="script.js"></script>
+</body>
+</html>
